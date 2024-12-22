@@ -1,49 +1,97 @@
 <?php get_header(); ?>
-<div class="container">
-    <?php if (have_posts()): ?>
-    <h1>Mes articles</h1>
-    <ul>
-        <?php while(have_posts()): the_post(); ?>
-        <li>
-            <?php the_post_thumbnail('thumbnail'); ?><br>
-            <?php the_title() ?> - <?php the_author(); ?>
-            <a href="<?php the_permalink(); ?>">lire l'article</a>
-        </li>
-        <?php endwhile; ?>
-    </ul>
-    <?php else: ?>
-    <h1>Aucun articles disponible pour le moment</h1>
-    <?php endif; ?>
-    <h3>Formations</h3>
-    <ul>
-        <?php
-$formationsList = new WP_Query([
-    'post_type' => 'formations',
-    'posts_per_page' => -1
-]);
-while ( $formationsList->have_posts() ) : $formationsList->the_post();
-    $start_date = get_post_meta(get_the_ID(), 'start_date', true);
-    $end_date = get_post_meta(get_the_ID(), 'end_date', true);
-    ?>
-        <li>
-            <?php if($start_date && $end_date): ?>
-            <?php echo $start_date; ?> - <?php echo $end_date; ?> :
-            <?php endif; ?>
-            <?php the_title(); ?>
-        </li>
-        <?php endwhile; ?>
-    </ul>
-    <h3>Compétences</h3>
-    <?php
-    $competencesList = new WP_Query([
-        'post_type' => 'competences',
-        'posts_per_page' => -1
-    ]);
-    ?>
-    <ul>
-        <?php while ($competencesList->have_posts()) : $competencesList->the_post(); ?>
-        <li><?php the_title(); ?></li>
-        <?php endwhile; ?>
-    </ul>
+
+<div class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>TravelSwap</h1>
+        <p>Vivez le monde à travers l'entraide</p>
+        <a href="<?php echo home_url('/'); ?>" class="btn-discover">VOYAGEURS</a>
+        <a href="<?php echo home_url('/'); ?>" class="btn-discover">HOTES</a>
+    </div>
 </div>
+
+<section class="about-section">
+    <h2>QUI SOMMES-NOUS ?</h2>
+    <p>
+        Nous sommes TravelSwap
+        <br />
+        Une plateforme d'hébergement qui permet aux voyageurs d'échanger leurs
+        compétences contre un logement gratuit.
+        <br />
+        Cette expérience favorise des rencontres authentiques, des découvertes
+        culturelles et des liens durables, offrant ainsi une nouvelle manière de
+        voyager !
+    </p>
+    <div class="about-grid">
+        <div>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_8.jpg" alt="Image 1">
+        </div>
+        <div>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_7.jpg" alt="Image 2">
+        </div>
+        <div>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_3.jpg" alt="Image 3">
+        </div>
+    </div>
+</section>
+
+<section class="destinations-section">
+    <h2>DESTINATIONS DISPONIBLES</h2>
+    <div class="destinations-grid">
+        <div>
+            <h3>Espagne</h3>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_6.jpg" alt="Destination 1">
+            <a href="#" class="btn-discover">VOIR PLUS</a>
+        </div>
+        <div>
+            <h3>Maroc</h3>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_14.jpg" alt="Destination 2">
+            <a href="#" class="btn-discover">VOIR PLUS</a>
+        </div>
+        <div>
+            <h3>Norvège</h3>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_15.jpg" alt="Destination 3">
+            <a href="#" class="btn-discover">VOIR PLUS</a>
+        </div>
+        <div>
+            <h3>Vietnam</h3>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_4.jpg" alt="Destination 4">
+            <a href="#" class="btn-discover">VOIR PLUS</a>
+        </div>
+    </div>
+</section>
+<section class="ready-section">
+    <h2>Prêt(e) à découvrir le monde autrement ?</h2>
+    <p class="slogan">
+        Faites le premier pas et rejoignez TravelSwap, où chaque rencontre est
+        une nouvelle aventure !
+    </p>
+    <div class="ready-grid">
+        <div>
+            <h3>Profil clé</h3>
+            <i class="fa-regular fa-user"></i>
+            <p class="slogan">Votre profil, votre passeport !</p>
+            <p>
+                Décrivez vos compétences et vos disponibilités pour attirer les
+                hôtes.
+            </p>
+        </div>
+        <div>
+            <h3>Explorez partout</h3>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <p class="slogan">Trouvez votre aventure !</p>
+            <p>Découvrez des hôtes et des lieux inspirants</p>
+        </div>
+        <div>
+            <h3>Planifiez tout</h3>
+            <i class="fa-regular fa-comments"></i>
+            <p class="slogan">Trouvez l'offre idéale ?</p>
+            <p>Lancez la discussion et organisez votre séjour !</p>
+        </div>
+    </div>
+</section>
+
+
+
+
 <?php get_footer(); ?>

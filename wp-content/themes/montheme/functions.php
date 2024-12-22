@@ -67,3 +67,6 @@ function save_your_fields_meta($post_id) {
     }
 }
 add_action('save_post', 'save_your_fields_meta');
+
+
+add_filter('show_admin_bar', '__return_false');
