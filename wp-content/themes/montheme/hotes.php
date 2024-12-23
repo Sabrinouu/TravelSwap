@@ -1,33 +1,56 @@
 <?php get_header(); ?>
-<h1>Hotes</h1>
-<?php
-$args = [
-    'post_type' => 'hotes',
-    'posts_per_page' => 10,
-];
-$query = new WP_Query($args);
+<div class="hero-section"
+    style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/img_16.jpg');">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Nos Hôtes</h1>
+    </div>
+</div>
 
-if ($query->have_posts()) {
-    while ($query->have_posts()) {
-        $query->the_post();
-        echo '<h2>' . get_the_title() . '</h2>';
-        echo '<p>Prénom : ' . get_post_meta(get_the_ID(), 'first_name', true) . '</p>';
-        echo '<p>Nom : ' . get_post_meta(get_the_ID(), 'last_name', true) . '</p>';
-        echo '<p>Pays : ' . get_post_meta(get_the_ID(), 'country', true) . '</p>';
-        echo '<p>Ville : ' . get_post_meta(get_the_ID(), 'city', true) . '</p>';
-        echo '<p>Type d’aide : ' . get_post_meta(get_the_ID(), 'type_help', true) . '</p>';
-        echo '<p>Âge : ' . get_post_meta(get_the_ID(), 'age', true) . '</p>';
-        echo '<img src="' . get_post_meta(get_the_ID(), 'img_path', true) . '" alt="Photo de l\'hôte">';
-        echo '<img src="' . get_post_meta(get_the_ID(), 'image_1', true) . '" alt="Image 1">';
-        echo '<img src="' . get_post_meta(get_the_ID(), 'image_2', true) . '" alt="Image 2">';
-        echo '<img src="' . get_post_meta(get_the_ID(), 'image_3', true) . '" alt="Image 3">';
-        echo '<p>Icône : ' . get_post_meta(get_the_ID(), 'icon', true) . '</p>';
-        echo '<p>Note : ' . get_post_meta(get_the_ID(), 'note', true) . '</p>';
-        echo '<p>Email : ' . get_post_meta(get_the_ID(), 'email', true) . '</p>';
+<section>
+    <div class="person-section">
+        <h2>Rencontrez nos hôtes et vivez des expériences uniques autour du monde !</h2>
+        <?php
+    $args = [
+        'post_type' => 'hotes',
+        'posts_per_page' => 10,
+    ];
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+            $thumbnail = get_post_meta(get_the_ID(), 'img_path', true);
+            $first_name = get_post_meta(get_the_ID(), 'first_name', true);
+            $last_name = get_post_meta(get_the_ID(), 'last_name', true);
+            $country = get_post_meta(get_the_ID(), 'country', true);
+            $type_help = get_post_meta(get_the_ID(), 'type_help', true);
+            ?>
+        <div class="person-card">
+            <div class="person-image">
+                <img src="<?php echo esc_url($thumbnail); ?>" alt="Photo de <?php echo esc_attr($first_name); ?>">
+            </div>
+            <div class="person-info">
+                <div class="person-nom">
+                    <h3><?php echo esc_html($first_name . ' ' . $last_name); ?></h3>
+                </div>
+                <div class="person-pays">
+                    <i class="fas fa-globe"></i>
+                    <span><?php echo esc_html($country); ?></span>
+                </div>
+                <div class="person-details">
+                    <p><?php echo esc_html($type_help); ?></p>
+                    <a href="<?php echo esc_url(home_url('/hotes/' . sanitize_title($first_name) . '-' . sanitize_title($last_name))); ?>"
+                        class="btn-more">En savoir plus sur l’hôte</a>
+                </div>
+            </div>
+        </div>
+        <?php
+        }
     }
-}
-wp_reset_postdata();
-?>
-
+    wp_reset_postdata();
+    ?>
+    </div>
+</section>
 
 <?php get_footer(); ?>

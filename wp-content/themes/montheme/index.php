@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
-<div class="hero-section">
+<div class="hero-section"
+    style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/img_12.jpg');">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <h1>TravelSwap</h1>
@@ -42,22 +43,22 @@
         <div>
             <h3>Espagne</h3>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_6.jpg" alt="Destination 1">
-            <a href="#" class="btn-discover">VOIR PLUS</a>
+            <a href="/PROJET-WORDPRESS/hotes/sergio-silens/" class="btn-discover">VOIR PLUS</a>
         </div>
         <div>
             <h3>Maroc</h3>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_14.jpg" alt="Destination 2">
-            <a href="#" class="btn-discover">VOIR PLUS</a>
+            <a href="/PROJET-WORDPRESS/hotes/mohamed-belghrid/" class="btn-discover">VOIR PLUS</a>
         </div>
         <div>
             <h3>Norvège</h3>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_15.jpg" alt="Destination 3">
-            <a href="#" class="btn-discover">VOIR PLUS</a>
+            <a href="/PROJET-WORDPRESS/hotes/john-hansen/" class="btn-discover">VOIR PLUS</a>
         </div>
         <div>
             <h3>Vietnam</h3>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_4.jpg" alt="Destination 4">
-            <a href="#" class="btn-discover">VOIR PLUS</a>
+            <a href="/PROJET-WORDPRESS/hotes/binh-hoang/" class="btn-discover">VOIR PLUS</a>
         </div>
     </div>
 </section>

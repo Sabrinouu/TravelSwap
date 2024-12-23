@@ -1,7 +1,6 @@
 /* Hero Section Styles */
 .hero-section {
   position: relative;
-  background-image: url("../IMG/img_12.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -339,5 +338,101 @@
 
   .ready-grid p {
     font-size: 0.8em;
+  }
+}
+
+/* Styles de base pour la section persons */
+.person-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.person-section h2 {
+  color: #424488;
+  text-align: center;
+}
+
+/* Card de person */
+.person-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  gap: 20px;
+}
+
+/* Image à gauche */
+.person-image img {
+  width: 100px; /* Taille thumbnail */
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+}
+
+/* Informations à droite */
+.person-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.person-nom h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #424488;
+}
+
+.person-pays {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+  gap: 5px;
+}
+
+.person-details p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.person-details .btn-more {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #acadcb;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.person-details .btn-more:hover {
+  background-color: #8e8fa9;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .person-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .person-image img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .person-details .btn-more {
+    width: 100%;
+    text-align: center;
   }
 }
