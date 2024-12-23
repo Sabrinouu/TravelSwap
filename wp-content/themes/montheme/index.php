@@ -5,8 +5,9 @@
     <div class="hero-content">
         <h1>TravelSwap</h1>
         <p>Vivez le monde à travers l'entraide</p>
-        <a href="<?php echo home_url('/'); ?>" class="btn-discover">VOYAGEURS</a>
-        <a href="<?php echo home_url('/'); ?>" class="btn-discover">HOTES</a>
+        <a href="/PROJET-WORDPRESS/voyageurs/" class="btn-discover">VOYAGEURS</a>
+        <a href="/PROJET-WORDPRESS/hotes/" class="btn-discover">HOTES</a>
+
     </div>
 </div>
 
