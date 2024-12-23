@@ -1,3 +1,9 @@
+<?php
+/**
+ * Template Name: Hotes
+ */
+?>
+
 <?php get_header(); ?>
 <div class="hero-section"
     style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/img_16.jpg');">

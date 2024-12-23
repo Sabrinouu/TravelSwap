@@ -122,5 +122,134 @@ function enqueue_custom_scripts() {
 add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
 
 
+add_filter('template_include', function($template) {
+    if (is_page('voyageurs')) { // Slug exact de la page
+        return get_template_directory() . '/voyageurs.php';
+    }
+    return $template;
+});
 
-//add_filter('show_admin_bar', '__return_false');
+
+add_action('wp_head', function() {
+    global $template;
+    echo "<!-- Template utilisé : " . basename($template) . " -->";
+});
+
+add_action('admin_post_nopriv_register_voyageur', 'handle_register_voyageur');
+add_action('admin_post_register_voyageur', 'handle_register_voyageur');
+
+function handle_register_voyageur() {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        // Récupération et validation des données
+        $first_name = sanitize_text_field($_POST['first_name']);
+        $last_name = sanitize_text_field($_POST['last_name']);
+        $email = sanitize_email($_POST['email']);
+        $birth_date = sanitize_text_field($_POST['birth_date']);
+        $phone = sanitize_text_field($_POST['phone']);
+        $country = sanitize_text_field($_POST['country']);
+        $languages = sanitize_text_field($_POST['languages']);
+        $id_card = sanitize_text_field($_POST['id_card']);
+        $about = sanitize_textarea_field($_POST['about']);
+
+        // Traitement du fichier (photo de profil)
+        if (!empty($_FILES['profile_picture']['name'])) {
+            $upload = wp_handle_upload($_FILES['profile_picture'], ['test_form' => false]);
+            if (isset($upload['url'])) {
+                $profile_picture_url = $upload['url'];
+            }
+        }
+
+        // Enregistrement dans la base de données (ou création de CPT)
+        $post_id = wp_insert_post([
+            'post_type' => 'voyageurs',
+            'post_title' => $first_name . ' ' . $last_name,
+            'post_content' => $about,
+            'post_status' => 'pending', // En attente de validation par l'admin
+        ]);
+
+        if ($post_id) {
+            update_post_meta($post_id, 'first_name', $first_name);
+            update_post_meta($post_id, 'last_name', $last_name);
+            update_post_meta($post_id, 'email', $email);
+            update_post_meta($post_id, 'birth_date', $birth_date);
+            update_post_meta($post_id, 'phone', $phone);
+            update_post_meta($post_id, 'country', $country);
+            update_post_meta($post_id, 'languages', $languages);
+            update_post_meta($post_id, 'id_card', $id_card);
+            if (!empty($profile_picture_url)) {
+                update_post_meta($post_id, 'profile_picture', $profile_picture_url);
+            }
+        }
+
+        // Redirection après soumission
+        wp_redirect(home_url('/merci-inscription'));
+        exit;
+    }
+}
+
+
+add_action('admin_post_nopriv_register_hote', 'handle_register_hote');
+add_action('admin_post_register_hote', 'handle_register_hote');
+
+function handle_register_hote() {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        // Récupérer et valider les données
+        $first_name = sanitize_text_field($_POST['first_name']);
+        $last_name = sanitize_text_field($_POST['last_name']);
+        $email = sanitize_email($_POST['email']);
+        $phone = sanitize_text_field($_POST['phone']);
+        $country = sanitize_text_field($_POST['country']);
+        $city = sanitize_text_field($_POST['city']);
+        $type_help = sanitize_text_field($_POST['type_help']);
+        $about = sanitize_textarea_field($_POST['about']);
+
+        // Gestion des fichiers (photos)
+        $images = [];
+        for ($i = 1; $i <= 3; $i++) {
+            if (!empty($_FILES["image_$i"]['name'])) {
+                $upload = wp_handle_upload($_FILES["image_$i"], ['test_form' => false]);
+                if (isset($upload['url'])) {
+                    $images[] = $upload['url'];
+                }
+            }
+        }
+
+        // Enregistrement dans la base de données ou CPT
+        $post_id = wp_insert_post([
+            'post_type' => 'hotes',
+            'post_title' => $first_name . ' ' . $last_name,
+            'post_content' => $about,
+            'post_status' => 'pending',
+        ]);
+
+        if ($post_id) {
+            update_post_meta($post_id, 'first_name', $first_name);
+            update_post_meta($post_id, 'last_name', $last_name);
+            update_post_meta($post_id, 'email', $email);
+            update_post_meta($post_id, 'phone', $phone);
+            update_post_meta($post_id, 'country', $country);
+            update_post_meta($post_id, 'city', $city);
+            update_post_meta($post_id, 'type_help', $type_help);
+            foreach ($images as $index => $image) {
+                update_post_meta($post_id, "image_$index", $image);
+            }
+        }
+
+        // Redirection après soumission
+        wp_redirect(home_url('/merci-inscription-hote'));
+        exit;
+    }
+}
+
+function get_current_language() {
+    // Détermine la langue actuelle via l'URL (paramètre 'lang') ou par défaut.
+    $current_language = isset($_GET['lang']) && in_array($_GET['lang'], ['fr', 'en']) ? $_GET['lang'] : 'fr';
+    return $current_language;
+}
+
+// Utiliser une constante globale pour la langue actuelle
+define('CURRENT_LANGUAGE', get_current_language());
+
+
+
+add_filter('show_admin_bar', '__return_false');

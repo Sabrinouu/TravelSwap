@@ -26,9 +26,8 @@
                             </span>
                         </div>
                         <div class="dropdown">
-                            <a href="<?php echo home_url('/'); ?>">Menu 1</a>
-                            <a href="<?php echo home_url('/'); ?>">Menu 2</a>
-                            <a href="<?php echo home_url('/'); ?>">Menu 3</a>
+                            <a href="/PROJET-WORDPRESS/inscription-voyageur/">Inscription voyageurs</a>
+                            <a href="/PROJET-WORDPRESS/inscription-hote/">Inscription hotes</a>
                         </div>
                     </li>
                 </ul>
@@ -39,14 +38,17 @@
             <div class="my-navbar-center">
                 <ul class="nav-links">
                     <li><a href="<?php echo home_url('/'); ?>">TRAVELSWAP</a></li>
-                    <li><a href="<?php echo home_url('/'); ?>">CONTACT</a></li>
-                    <li><a href="<?php echo home_url('/'); ?>">SÉCURITÉ</a></li>
+                    <li><a href="/PROJET-WORDPRESS/contact/">CONTACT</a></li>
+                    <li><a href="/PROJET-WORDPRESS/securite/">SÉCURITÉ</a></li>
                 </ul>
             </div>
             <div class="my-navbar-right">
                 <ul class="nav-right-links">
                     <li>
-                        <a href="<?php echo home_url('/'); ?>">FRANCAIS</a>
+                        <a
+                            href="<?php echo add_query_arg('lang', (isset($_GET['lang']) && $_GET['lang'] === 'en') ? 'fr' : 'en', home_url('/')); ?>">
+                            <?php echo (isset($_GET['lang']) && $_GET['lang'] === 'en') ? 'FRANÇAIS' : 'ENGLISH'; ?>
+                        </a>
                     </li>
                     <li>
                         <a href="#?">
