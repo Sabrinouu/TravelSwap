@@ -1,27 +1,28 @@
 <?php wp_footer(); ?>
 <footer>
-    <h2>TravelSwap</h2>
-    <h3>NAVIGATION</h3>
+    <div class="footer-top">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="Logo">
+    </div>
     <div class="footer-grid">
         <div>
-            <a href="/">Accueil</a>
-            <a href="/#qui-sommes-nous">Qui sommes-nous ?</a>
-            <a href="/#destination">Destinations</a>
-            <a href="/#comment-ca-marche">Comment ça marche ?</a>
-        </div>
-        <div>
-            <a href="/PROJET-WORDPRESS/hotes/sergio-silens/">Espagne</a>
-            <a href="/PROJET-WORDPRESS/hotes/john-hansen/">Norvège</a>
-            <a href="/PROJET-WORDPRESS/hotes/mohamed-belghrid/">Maroc</a>
-            <a href="/PROJET-WORDPRESS/hotes/binh-hoang/">Vietnam</a>
-        </div>
-        <div>
-            <h4>SUIS-NOUS</h4>
+            <h4>RÉSEAUX-SOCIAUX</h4>
             <div class="social-icons">
                 <i class="fab fa-facebook"></i>
-                <i class="fab fa-twitter"></i>
                 <i class="fab fa-instagram"></i>
+                <i class="fab fa-x"></i>
             </div>
+
+        </div>
+        <div>
+            <h4>CONTACTEZ-NOUS</h4>
+            <p>contact@travelswap.com</p>
+            <p>02/412.47.70</p>
+        </div>
+        <div>
+            <h4>
+                <a href="/PROJET-WORDPRESS/mentions/">MENTIONS LÉGALES</a>
+            </h4>
+            <a href="/PROJET-WORDPRESS/#qui-sommes-nous">Qui sommes nous ?</a>
         </div>
     </div>
     <h3>NEWSLETTER</h3>

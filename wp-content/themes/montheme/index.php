@@ -12,7 +12,7 @@
     </div>
 </div>
 
-<section class="about-section">
+<section class="about-section" id="qui-sommes-nous">
     <h2>QUI SOMMES-NOUS ?</h2>
     <p>
         Nous sommes TravelSwap

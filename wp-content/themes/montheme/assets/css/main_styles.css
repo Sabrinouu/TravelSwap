@@ -99,6 +99,28 @@
   max-width: 100%; /* Limite la largeur pour éviter les débordements */
 }
 
+.mentions-top {
+  display: flex;
+  align-items: center;
+  padding: 50px 50px;
+  height: 100px;
+  background-color: #fcd7c1;
+}
+
+.mentions-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #030660;
+}
+
+.mentions-contact-info {
+  background: #f7f7f7;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
 /* Media Queries for responsiveness */
 @media (max-width: 1024px) {
   .about-grid {
@@ -860,6 +882,10 @@
   height: 100px;
 }
 
+.form-group input[type="checkbox"] {
+  width: auto;
+}
+
 .photo-upload {
   text-align: center;
   margin-top: 20px;
@@ -925,13 +951,6 @@
   font-size: 12px;
   color: #999;
   margin-top: 5px;
-}
-
-/* Conditions */
-.conditions label {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 14px;
 }
 
 /* Responsive */

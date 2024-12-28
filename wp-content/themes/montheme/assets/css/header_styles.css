@@ -31,16 +31,17 @@ body {
 }
 
 .my-navbar-left .nav-left-links {
-  color: #fff;
   list-style: none;
   display: flex;
   margin: 0;
   padding: 0;
 }
 
-.my-navbar-left .nav-left-links li {
+.my-navbar-left .nav-left-links li a {
+  color: #fff;
   margin-left: 10px;
   position: relative;
+  text-decoration: none;
 }
 
 .my-navbar-left .menu-toggle {
@@ -95,7 +96,7 @@ body {
   position: relative;
 }
 
-.my-navbar-right .nav-right-links li a {
+.my-navbar-right .nav-right-links li i {
   text-decoration: none;
   color: #fff;
   padding: 8px 12px;
@@ -107,7 +108,7 @@ body {
   position: absolute;
   background-color: rgba(88, 65, 60, 0.7);
   top: 100%;
-  left: 0;
+  right: 0;
   min-width: 150px;
   background-color: rgba(54, 41, 38, 0.7);
   z-index: 1000;

@@ -6,7 +6,7 @@
 <?php get_header(); ?>
 
 <div class="hero-section"
-    style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/img_18.jpg');">
+    style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/img_19.jpg');">
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <h1>S'inscrire en tant que voyageur</h1>
@@ -83,7 +83,7 @@
         </div>
 
         <h3>Conditions d'utilisation</h3>
-        <div class="form-group conditions">
+        <div class="form-group">
             <label><input type="checkbox" name="terms[]" value="rules" required> Je respecte les règles et conditions
                 établies par l’hôte que j’accueille.</label>
             <label><input type="checkbox" name="terms[]" value="services" required> Je m’engage à offrir mes services

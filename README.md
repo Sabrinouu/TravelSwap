@@ -53,6 +53,6 @@ Ajouter la clé publique dans GitHub : https://github.com.
 
 Accéder à la page admin WordPress : http://localhost:8888/PROJET-WORDPRESS/wp-admin/index.php
 
-### Base de donnée :
+### Base de données :
 
 PhpMyAdmin - Base de données : http://localhost:8888/phpMyAdmin5/index.php

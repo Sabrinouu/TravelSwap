@@ -19,17 +19,8 @@
         <nav class="my-navbar">
             <div class="my-navbar-left">
                 <ul class="nav-left-links">
-                    <li>
-                        <div>
-                            <span>MENU
-                                <i class="fas fa-chevron-down"></i>
-                            </span>
-                        </div>
-                        <div class="dropdown">
-                            <a href="/PROJET-WORDPRESS/inscription-voyageur/">Inscription voyageurs</a>
-                            <a href="/PROJET-WORDPRESS/inscription-hote/">Inscription hotes</a>
-                        </div>
-                    </li>
+                    <li><a href="<?php echo home_url('/'); ?>">TRAVELSWAP</a></li>
+
                 </ul>
                 <button class="menu-toggle" aria-label="Toggle navigation" style="margin-left: 40px">
                     <i class="fas fa-bars"></i>
@@ -37,7 +28,12 @@
             </div>
             <div class="my-navbar-center">
                 <ul class="nav-links">
-                    <li><a href="<?php echo home_url('/'); ?>">TRAVELSWAP</a></li>
+                    <li>
+                        <a
+                            href="<?php echo add_query_arg('lang', (isset($_GET['lang']) && $_GET['lang'] === 'en') ? 'fr' : 'en', home_url('/')); ?>">
+                            <?php echo (isset($_GET['lang']) && $_GET['lang'] === 'en') ? 'FRANÇAIS' : 'ENGLISH'; ?>
+                        </a>
+                    </li>
                     <li><a href="/PROJET-WORDPRESS/contact/">CONTACT</a></li>
                     <li><a href="/PROJET-WORDPRESS/securite/">SÉCURITÉ</a></li>
                 </ul>
@@ -45,15 +41,13 @@
             <div class="my-navbar-right">
                 <ul class="nav-right-links">
                     <li>
-                        <a
-                            href="<?php echo add_query_arg('lang', (isset($_GET['lang']) && $_GET['lang'] === 'en') ? 'fr' : 'en', home_url('/')); ?>">
-                            <?php echo (isset($_GET['lang']) && $_GET['lang'] === 'en') ? 'FRANÇAIS' : 'ENGLISH'; ?>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/PROJET-WORDPRESS/wp-admin/index.php">
-                            <i class="fas fa-user-circle"></i>
-                        </a>
+                        <div><i class="fas fa-user-circle"></i>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="dropdown">
+                            <a href="/PROJET-WORDPRESS/inscription-voyageur/">Inscription voyageurs</a>
+                            <a href="/PROJET-WORDPRESS/inscription-hote/">Inscription hotes</a>
+                        </div>
                     </li>
                 </ul>
             </div>
