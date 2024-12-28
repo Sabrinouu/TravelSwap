@@ -14,7 +14,7 @@
    - **Username** : root
    - **Password** : root
    - **Database Host** : localhost:8889
-   - **Table Prefix** : prefix_ (éviter `wp_` car cela génère des erreurs lors de la création).
+   - **Table Prefix** : prefix* (éviter `wp*` car cela génère des erreurs lors de la création).
 7. Complétez les champs restants :
    - **Site Title** : travelswap
    - **Username** : test
@@ -49,5 +49,10 @@ Ajouter la clé publique dans GitHub : https://github.com.
 
 ## Etape 3 : Wordpress
 
+### Page Admin WordPress :
+
 Accéder à la page admin WordPress : http://localhost:8888/PROJET-WORDPRESS/wp-admin/index.php
+
+### Base de donnée :
+
 PhpMyAdmin - Base de données : http://localhost:8888/phpMyAdmin5/index.php
