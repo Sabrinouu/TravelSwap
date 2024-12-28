@@ -1,15 +1,13 @@
-/* Styles de base */
 body {
   margin: 0;
   padding: 0;
 }
 
-/* my-navbar Styles */
 .my-navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px; /* Marge interne pour la my-navbar entière */
+  padding: 10px 20px;
   position: absolute;
   top: 0;
   left: 0;
@@ -21,7 +19,7 @@ body {
 .my-navbar-left {
   display: flex;
   align-items: center;
-  padding-left: 20px; /* Ajout d'espacement du bord gauche */
+  padding-left: 20px;
 }
 
 .my-navbar-left .logo {
@@ -81,7 +79,7 @@ body {
 .my-navbar-right {
   display: flex;
   align-items: center;
-  padding-right: 20px; /* Ajout d'espacement du bord droit */
+  padding-right: 20px;
 }
 
 .my-navbar-right .nav-right-links {
@@ -131,7 +129,6 @@ body {
   display: block;
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
   .my-navbar .menu-toggle {
     display: block;

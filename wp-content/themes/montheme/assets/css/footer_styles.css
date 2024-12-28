@@ -45,7 +45,7 @@ footer .footer-grid {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   justify-items: center;
-  align-items: start; /* Changer l'alignement vertical */
+  align-items: start;
   margin: 20px 0;
   text-align: left;
   font-weight: 500;
@@ -82,7 +82,7 @@ footer .social-icons i {
 
 footer .email-section {
   display: flex;
-  justify-content: center; /* Centrer le formulaire d'email */
+  justify-content: center;
   margin: 10px 0;
 }
 
@@ -90,7 +90,7 @@ footer .email-section input {
   padding: 10px;
   font-size: 1em;
   width: 100%;
-  max-width: 400px; /* Limiter la largeur maximale */
+  max-width: 400px;
   margin: 10px 0;
   border: 1px solid #030660;
   background-color: #ffc8a8;
@@ -103,7 +103,6 @@ footer p {
   color: #030660;
 }
 
-/* Media queries pour rendre le footer responsive */
 @media (max-width: 1024px) {
   footer .footer-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -141,7 +140,7 @@ footer p {
   }
 
   footer .email-section input {
-    max-width: 90%; /* Réduit la largeur maximale à 90% sur les petits écrans */
+    max-width: 90%;
   }
 
   footer p {
@@ -171,6 +170,6 @@ footer p {
   }
 
   footer .email-section input {
-    max-width: 100%; /* 100% de la largeur sur les très petits écrans */
+    max-width: 100%;
   }
 }
