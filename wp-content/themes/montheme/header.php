@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/header_styles.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/index_styles.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/main_styles.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/footer_styles.css">
 </head>
 
@@ -51,7 +51,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#?">
+                        <a href="/PROJET-WORDPRESS/wp-admin/index.php">
                             <i class="fas fa-user-circle"></i>
                         </a>
                     </li>
