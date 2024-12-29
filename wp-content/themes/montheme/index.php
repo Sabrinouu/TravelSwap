@@ -6,8 +6,8 @@
     <div class="hero-content">
         <h1>TravelSwap</h1>
         <p>Vivez le monde à travers l'entraide</p>
-        <a href="/TravelSwap/nos-voyageurs/" class="btn-discover">VOYAGEURS</a>
-        <a href="/TravelSwap/nos-hotes/" class="btn-discover">HOTES</a>
+        <a href="/TravelSwap/voyageurs/" class="btn-discover">VOYAGEURS</a>
+        <a href="/TravelSwap/hotes/" class="btn-discover">HOTES</a>
 
     </div>
 </div>
