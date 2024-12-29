@@ -34,8 +34,8 @@
                             <?php echo (isset($_GET['lang']) && $_GET['lang'] === 'en') ? 'FRANÇAIS' : 'ENGLISH'; ?>
                         </a>
                     </li>
-                    <li><a href="/PROJET-WORDPRESS/contact/">CONTACT</a></li>
-                    <li><a href="/PROJET-WORDPRESS/securite/">SÉCURITÉ</a></li>
+                    <li><a href="/TravelSwap/contact/">CONTACT</a></li>
+                    <li><a href="/TravelSwap/securite/">SÉCURITÉ</a></li>
                 </ul>
             </div>
             <div class="my-navbar-right">
@@ -45,8 +45,8 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="dropdown">
-                            <a href="/PROJET-WORDPRESS/inscription-voyageur/">Inscription voyageurs</a>
-                            <a href="/PROJET-WORDPRESS/inscription-hote/">Inscription hotes</a>
+                            <a href="/TravelSwap/inscription-voyageur/">Inscription voyageurs</a>
+                            <a href="/TravelSwap/inscription-hote/">Inscription hotes</a>
                         </div>
                     </li>
                 </ul>

@@ -6,8 +6,8 @@
     <div class="hero-content">
         <h1>TravelSwap</h1>
         <p>Vivez le monde à travers l'entraide</p>
-        <a href="/PROJET-WORDPRESS/nos-voyageurs/" class="btn-discover">VOYAGEURS</a>
-        <a href="/PROJET-WORDPRESS/nos-hotes/" class="btn-discover">HOTES</a>
+        <a href="/TravelSwap/nos-voyageurs/" class="btn-discover">VOYAGEURS</a>
+        <a href="/TravelSwap/nos-hotes/" class="btn-discover">HOTES</a>
 
     </div>
 </div>
@@ -43,22 +43,22 @@
         <div>
             <h3>Espagne</h3>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_6.jpg" alt="Destination 1">
-            <a href="/PROJET-WORDPRESS/hotes/sergio-silens/" class="btn-discover">VOIR PLUS</a>
+            <a href="/TravelSwap/hotes/sergio-silens/" class="btn-discover">VOIR PLUS</a>
         </div>
         <div>
             <h3>Maroc</h3>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_14.jpg" alt="Destination 2">
-            <a href="/PROJET-WORDPRESS/hotes/mohamed-belghrid/" class="btn-discover">VOIR PLUS</a>
+            <a href="/TravelSwap/hotes/mohamed-belghrid/" class="btn-discover">VOIR PLUS</a>
         </div>
         <div>
             <h3>Norvège</h3>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_15.jpg" alt="Destination 3">
-            <a href="/PROJET-WORDPRESS/hotes/john-hansen/" class="btn-discover">VOIR PLUS</a>
+            <a href="/TravelSwap/hotes/john-hansen/" class="btn-discover">VOIR PLUS</a>
         </div>
         <div>
             <h3>Vietnam</h3>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_4.jpg" alt="Destination 4">
-            <a href="/PROJET-WORDPRESS/hotes/binh-hoang/" class="btn-discover">VOIR PLUS</a>
+            <a href="/TravelSwap/hotes/binh-hoang/" class="btn-discover">VOIR PLUS</a>
         </div>
     </div>
 </section>

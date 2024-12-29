@@ -20,9 +20,9 @@
         </div>
         <div>
             <h4>
-                <a href="/PROJET-WORDPRESS/mentions/">MENTIONS LÉGALES</a>
+                <a href="/TravelSwap/mentions/">MENTIONS LÉGALES</a>
             </h4>
-            <a href="/PROJET-WORDPRESS/#qui-sommes-nous">Qui sommes nous ?</a>
+            <a href="/TravelSwap/#qui-sommes-nous">Qui sommes nous ?</a>
         </div>
     </div>
     <h3>NEWSLETTER</h3>
