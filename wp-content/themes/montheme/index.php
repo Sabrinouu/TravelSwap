@@ -48,7 +48,7 @@
         <div>
             <h3>Maroc</h3>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/img_14.jpg" alt="Destination 2">
-            <a href="/hotes/mohamed-belghrid/" class="btn-discover">VOIR PLUS</a>
+            <a href="/hotes/mohammed-belghrid/" class="btn-discover">VOIR PLUS</a>
         </div>
         <div>
             <h3>Norvège</h3>
