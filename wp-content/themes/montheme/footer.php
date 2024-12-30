@@ -1,7 +1,7 @@
 <?php wp_footer(); ?>
 <footer>
     <div class="footer-top">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="Logo">
+        <a href="/#acceuil"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="Logo"></a>
     </div>
     <div class="footer-grid">
         <div>

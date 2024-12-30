@@ -18,7 +18,6 @@
     </div>
 
     <div class="safety-steps">
-        <!-- Avant l'échange -->
         <div class="step">
             <h3 class="step-title">AVANT L'ÉCHANGE</h3>
             <ul>
@@ -32,7 +31,6 @@
             </ul>
         </div>
 
-        <!-- Pendant le séjour -->
         <div class="step">
             <h3 class="step-title">PENDANT LE SÉJOUR</h3>
             <ul>
@@ -43,7 +41,6 @@
             </ul>
         </div>
 
-        <!-- Restez vigilant -->
         <div class="step">
             <h3 class="step-title">RESTEZ VIGILANT</h3>
             <ul>
@@ -58,9 +55,21 @@
     <div class="faq-section">
         <h2>FAQ</h2>
         <ul class="faq-list">
-            <li>Quels services puis-je offrir en échange d’un hébergement ?</li>
-            <li>Mon profil doit-il être vérifié avant de pouvoir faire des échanges ?</li>
-            <li>Que faire si un problème survient pendant mon séjour ?</li>
+            <li>
+                <b>Quels services puis-je offrir en échange d’un hébergement ?</b>
+                <div class="faq-answer">Jardinage, garde d'animaux, baby-sitting, tâches ménagères, cours de langues
+                    selon vos attentes et vos compétences de l'hôte.</div>
+            </li>
+            <li>
+                <b>Mon profil doit-il être vérifié avant de pouvoir faire des échanges ?</b>
+                <div class="faq-answer">Oui la vérification du profil est nécéssaire pour garantir un environement sur
+                    et instaurer la confiance.</div>
+            </li>
+            <li>
+                <b>Que faire si un problème survient pendant mon séjour ?</b>
+                <div class="faq-answer">Discutez avec votre hote/voyageur. Si cela ne resoud pas la situation. ALler à
+                    la pagfe de contact si nécéssaire</div>
+            </li>
         </ul>
     </div>
 </section>
